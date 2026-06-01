@@ -56,8 +56,9 @@ export function HeroSection() {
             transition={{ duration: 1, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-white leading-[0.85] tracking-tight break-words"
           >
+            WE DO MORE THAN
             <br />
-            <span className="italic text-[#789dbe] text-glow">THAN JUST TURN UP</span>
+            <span className="italic text-[#789dbe] text-glow">JUST TURN UP</span>
           </motion.h1>
 
           <motion.div
