@@ -25,10 +25,10 @@ export function IntroSection() {
           >
             <p className="text-[#789dbe] text-xs uppercase tracking-[0.4em] mb-3">ML Event Entertainment</p>
             <p className="text-white/40 text-xs uppercase tracking-[0.3em] mb-6">Professional DJ Company Based in Charleston, SC</p>
-            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-white leading-[0.9] mb-4">
+            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-white leading-[0.9] mb-4 underline">
               WE DO MORE
               <br />
-              <span className="italic text-[#789dbe]">THAN JUST TURN UP</span>
+              <span className="italic text-[#789dbe]"></span>
             </h2>
             <p className="text-white/50 text-sm uppercase tracking-[0.2em] mb-8">
               ML Event Entertainment specializes in weddings &amp; corporate events

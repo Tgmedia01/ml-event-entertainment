@@ -17,7 +17,7 @@ const services = [
     title: "Photo Booth",
     subtitle: "The Memories",
     description:
-      "Our modern, open-air photo experience captures candid joy with instant prints and digital sharing your guests will absolutely love. The slick, interactive touchscreen display looks picture-perfect in any venue available with a classic white front or our popular reflective mirror front for the perfect selfie every time. Guests can share photos, boomerangs, and video messages via text, email, and social media, plus take home personalised keepsakes.",
+      "From company parties to awards ceremonies we offer Professionalism, top-tier sound, and an atmosphere that strikes the perfect balance between energy and elegance.",
     image: "/images/photobooth-203.jpg",
     stats: "Instant Prints",
     href: "/services",
@@ -26,7 +26,7 @@ const services = [
     title: "Corporate Events",
     subtitle: "The Experience",
     description:
-      "When it comes to corporate events, we deliver professionalism, top-tier sound, and an unforgettable atmosphere. Whether you are hosting a company party, product launch, conference, or awards ceremony, our experienced DJs know how to strike the perfect balance between energy and elegance. We specialise in creating moments that bring people together and leave a lasting impression on every guest in the room.",
+      "Modern open-air booth with touchscreen display, instant HD prints, and digital sharing will make the best    centrepiece your guests will never leave.\n",
     image: "/images/486805890-1225907382869985-1453893794816927731-n.jpg",
     stats: "All Event Types",
     href: "/services",
