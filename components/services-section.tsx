@@ -17,7 +17,7 @@ const services = [
     title: "Photo Booth",
     subtitle: "The Memories",
     description:
-      "From company parties to awards ceremonies we offer Professionalism, top-tier sound, and an atmosphere that strikes the perfect balance between energy and elegance.",
+      "Modern open-air booth with touchscreen display, instant HD prints, and digital sharing will make the best centrepiece your guests will never leave.",
     image: "/images/photobooth-203.jpg",
     stats: "Instant Prints",
     href: "/services",
@@ -26,7 +26,7 @@ const services = [
     title: "Corporate Events",
     subtitle: "The Experience",
     description:
-      "Modern open-air booth with touchscreen display, instant HD prints, and digital sharing will make the best    centrepiece your guests will never leave.\n",
+      "From company parties to awards ceremonies we offer Professionalism, top-tier sound, and an atmosphere that strikes the perfect balance between energy and elegance.",
     image: "/images/486805890-1225907382869985-1453893794816927731-n.jpg",
     stats: "All Event Types",
     href: "/services",

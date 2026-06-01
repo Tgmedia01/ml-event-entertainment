@@ -260,13 +260,27 @@ export function ServicesPageContent() {
       {/* Music Planning */}
       <section className="py-24 lg:py-32 px-6 lg:px-16 bg-[#004563]/10">
         <div className="max-w-4xl mx-auto">
-          <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
-            <p className="text-[#789dbe] uppercase tracking-[0.4em] text-xs mb-6">Weddings & Events</p>
-            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-white leading-[0.85]">
-              PRESSING PLAY
+          <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
+            <p className="text-[#3f566d] text-xs uppercase tracking-[0.4em] mb-6">After Booking</p>
+            <h2 className="font-serif text-4xl md:text-5xl text-white leading-[0.9] mb-8">
+              YOUR ONLINE
               <br />
-              <span className="italic text-[#789dbe] text-glow">ON YOUR BIG DAY</span>
-            </h1>
+              <span className="italic text-[#789dbe]">MUSIC PLANNING TOOLS</span>
+            </h2>
+            <p className="text-white/70 text-xl leading-relaxed mb-6">
+              Planning just got a whole lot easier. After booking, you receive your own private online planning
+              account so you stay organized from the moment we save your date.
+            </p>
+            <p className="text-white/50 leading-relaxed mb-6">
+              Build your Must Play list, your Do Not Play list, dedications, special moment songs (first dance,
+              cake cutting, ceremony selections, introductions), and browse the most requested wedding songs
+              of all time.
+            </p>
+            <p className="text-white/50 leading-relaxed">
+              Do not know where to start? Just pick the most important songs and let us handle the rest. A great
+              DJ reads the room giving your DJ creative control alongside your must-plays is the secret to
+              keeping the floor packed all night.
+            </p>
           </motion.div>
         </div>
       </section>

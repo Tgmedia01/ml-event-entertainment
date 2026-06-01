@@ -16,7 +16,7 @@ const services = [
   {
     number: "02",
     title: "Corporate Events",
-    description: "Professionalism, top-tier sound, and an atmosphere that strikes the perfect balance between energy and elegance from company parties to awards ceremonies.",
+    description: "From company parties to awards ceremonies we offer Professionalism, top-tier sound, and an atmosphere that strikes the perfect balance between energy and elegance.",
     image: "/images/dj-booth-venue-setup.png",
     href: "/services/corporate",
     cta: "Learn More",
@@ -24,7 +24,7 @@ const services = [
   {
     number: "03",
     title: "Photo Booth",
-    description: "Modern open-air booth with touchscreen display, instant HD prints, and digital sharing. Available with 12+ backdrop options a centerpiece your guests will never leave.",
+    description: "Modern open-air booth with touchscreen display, instant HD prints, and digital sharing will make the best    centrepiece your guests will never leave.\n",
     image: "/images/photo-booth-group-props.png",
     href: "/services/photo-booth",
     cta: "View Photo Booth",
