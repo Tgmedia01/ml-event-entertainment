@@ -5,9 +5,9 @@ import Link from "next/link"
 import { Instagram } from "lucide-react"
 
 const stats = [
-  { number: "500+", label: "Events Performed" },
+  { number: "1000+", label: "Events Performed" },
   { number: "15+", label: "Years Experience" },
-  { number: "4x", label: "Award Winner" },
+  { number: "10x", label: "Award Winner" },
   { number: "5★", label: "Across All Platforms" },
 ]
 
