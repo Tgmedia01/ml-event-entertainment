@@ -61,9 +61,9 @@ const addOns = [
       "Personalised event branding on prints",
     ],
     images: [
-      { src: "/images/reception(293).jpg", caption: "Guests having a blast" },
+      { src: "/images/reception(293).JPG", caption: "Guests having a blast" },
       { src: "/images/photo-booth-mirror.png", caption: "Mirror front in action" },
-      { src: "/images/reception(293).jpg", caption: "Fun props selection" },
+      { src: "/images/reception(293).JPG", caption: "Fun props selection" },
     ],
     cta: "Add Photo Booth",
   },
@@ -85,7 +85,7 @@ const addOns = [
       "Elegant or party vibe settings",
     ],
     images: [
-      { src: "/images/748612_7157284f603845e18b75ff233120f50b_mv2-scaled.jpg", caption: "Indoor venue uplighting" },
+      { src: "/images/748612_7157284f603845e18b75ff233120f50b_mv2-scaled.png", caption: "Indoor venue uplighting" },
       { src: "/images/McKissick_4.jpg", caption: "Purple and blue ambient uplighting" },
       { src: "/images/wedding-first-dance-outdoor.jpg", caption: "Uplighting in action" },
     ],

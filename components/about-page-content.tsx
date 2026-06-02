@@ -6,7 +6,7 @@ import { Instagram } from "lucide-react"
 
 const stats = [
   { number: "1000+", label: "Events Performed" },
-  { number: "15+", label: "Years Experience" },
+  { number: "20+", label: "Years Experience" },
   { number: "10x", label: "Award Winner" },
   { number: "5★", label: "Across All Platforms" },
 ]
@@ -46,7 +46,7 @@ const team = [
   {
     name: "Mikey Lee",
     role: "Founder & Lead DJ",
-    image: "/images/8AFF7056-C15D-4F14-828F-4C2FF7EE67A3.png",
+    image: "/images/8AFF7056-C15D-4F14-828F-4C2FF7EE67A3.jpg",
     bio: "Mikey Lee is the founder and lead DJ of ML Event Entertainment, bringing over 20 years of full time DJ experience to weddings, private events, and parties around the world. His career has taken him across Europe, the United States, and aboard some of the largest cruise ships sailing today covering London, Ibiza, Miami, and Los Angeles along the way. After meeting his now wife Katelin, Mikey made the move to Charleston, South Carolina, a city that inspired him to launch his own company. What began as a passion project quickly grew into one of the Lowcountry's most awarded entertainment services.",
   },
   {
@@ -65,7 +65,7 @@ const team = [
     name: "Aaron",
     role: "DJ AARO",
     image: "/images/rsw_1200h_1200cg_true-mikey.png",
-    bio: "With over 20 years of experience behind the decks, DJ AARO has built a reputation for delivering high-energy, unforgettable events with a personal touch. He brings passion, professionalism, and nonstop fun to every celebration. Originally honing his craft in New Jersey before bringing his talents to Charleston, South Carolina, DJ AARO developed a deep appreciation for all music genres and knows how to create a soundtrack that connects with every crowd. Whether it's timeless classics, current hits, or throwback anthems, he knows how to keep the dance floor packed all night long. Known for his infectious personality and ability to truly read the room, DJ AARO works closely with every client to bring their vision to life and ensure every detail feels seamless from start to finish.",
+    bio: "With over 15 years of experience behind the decks, DJ AARO has built a reputation for delivering high-energy, unforgettable events with a personal touch. He brings passion, professionalism, and nonstop fun to every celebration. Originally honing his craft in New Jersey before bringing his talents to Charleston, South Carolina, DJ AARO developed a deep appreciation for all music genres and knows how to create a soundtrack that connects with every crowd. Whether it's timeless classics, current hits, or throwback anthems, he knows how to keep the dance floor packed all night long. Known for his infectious personality and ability to truly read the room, DJ AARO works closely with every client to bring their vision to life and ensure every detail feels seamless from start to finish.",
   },
 ]
 
