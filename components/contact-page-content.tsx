@@ -296,43 +296,43 @@ export function ContactPageContent() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-4"
+            className="flex flex-wrap gap-4 mb-4"
           >
-            <a href="tel:4246539365" className="flex items-center gap-4 group glass rounded-2xl p-5">
+            <a href="tel:4246539365" className="flex items-center gap-4 group glass rounded-2xl p-5 flex-shrink-0">
               <div className="w-10 h-10 rounded-full bg-[#789dbe]/20 flex items-center justify-center flex-shrink-0 group-hover:bg-[#789dbe]/30 transition-colors duration-300">
                 <Phone className="w-4 h-4 text-[#789dbe]" />
               </div>
-              <div>
+              <div className="whitespace-nowrap">
                 <p className="text-white/30 text-xs uppercase tracking-[0.2em] mb-0.5">Phone</p>
                 <p className="text-white text-sm group-hover:text-[#789dbe] transition-colors duration-300">424.653.9365</p>
               </div>
             </a>
 
-            <a href="mailto:mikeylee@mlevententertainment.com" className="flex items-center gap-4 group glass rounded-2xl p-5">
+            <a href="mailto:mikeylee@mlevententertainment.com" className="flex items-center gap-4 group glass rounded-2xl p-5 flex-shrink-0">
               <div className="w-10 h-10 rounded-full bg-[#789dbe]/20 flex items-center justify-center flex-shrink-0 group-hover:bg-[#789dbe]/30 transition-colors duration-300">
                 <Mail className="w-4 h-4 text-[#789dbe]" />
               </div>
-              <div>
+              <div className="whitespace-nowrap">
                 <p className="text-white/30 text-xs uppercase tracking-[0.2em] mb-0.5">Email</p>
-                <p className="text-white text-sm group-hover:text-[#789dbe] transition-colors duration-300 break-all">mikeylee@mlevententertainment.com</p>
+                <p className="text-white text-sm group-hover:text-[#789dbe] transition-colors duration-300">mikeylee@mlevententertainment.com</p>
               </div>
             </a>
 
-            <div className="flex items-center gap-4 glass rounded-2xl p-5">
+            <div className="flex items-center gap-4 glass rounded-2xl p-5 flex-shrink-0">
               <div className="w-10 h-10 rounded-full bg-[#789dbe]/20 flex items-center justify-center flex-shrink-0">
                 <MapPin className="w-4 h-4 text-[#789dbe]" />
               </div>
-              <div>
+              <div className="whitespace-nowrap">
                 <p className="text-white/30 text-xs uppercase tracking-[0.2em] mb-0.5">Location</p>
                 <p className="text-white text-sm">Charleston, South Carolina</p>
               </div>
             </div>
 
-            <div className="flex items-center gap-4 glass rounded-2xl p-5">
+            <div className="flex items-center gap-4 glass rounded-2xl p-5 flex-shrink-0">
               <div className="w-10 h-10 rounded-full bg-[#789dbe]/20 flex items-center justify-center flex-shrink-0">
                 <Instagram className="w-4 h-4 text-[#789dbe]" />
               </div>
-              <div>
+              <div className="whitespace-nowrap">
                 <p className="text-white/30 text-xs uppercase tracking-[0.2em] mb-0.5">Follow Us</p>
                 <div className="flex gap-3 mt-1">
                   {[

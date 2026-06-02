@@ -1,102 +1,273 @@
 "use client"
 
-import type React from "react"
-
-import { useState } from "react"
+import { useEffect } from "react"
 import { motion } from "framer-motion"
-import { Calendar, MapPin, Users, Music, Camera, Lightbulb, Sparkles, Mail, Phone, Clock } from "lucide-react"
 
-const services = [
-  { id: "dj", label: "DJ Services", icon: Music },
-  { id: "photobooth", label: "Photo Booth", icon: Camera },
-  { id: "uplighting", label: "Uplighting", icon: Lightbulb },
-  { id: "coldsparks", label: "Cold Sparks", icon: Sparkles },]
+function CRMQuestionnaireForm() {
+  useEffect(() => {
+    if (typeof window === "undefined") return
+
+    if (!(window as any).jQuery) {
+      const jq = document.createElement("script")
+      jq.src = "https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"
+      jq.type = "text/javascript"
+      document.head.appendChild(jq)
+    }
+
+    const script = document.createElement("script")
+    script.src = "https://mlevententertainmentclientlogin.com/check_req_info_form.js"
+    script.type = "text/javascript"
+    document.body.appendChild(script)
+
+    return () => {
+      if (document.body.contains(script)) document.body.removeChild(script)
+    }
+  }, [])
+
+  return (
+    <>
+      <style>{`
+        .crm-q-form form { color: #cbd5e1; }
+        .crm-q-form .form-group { margin-bottom: 18px; }
+        .crm-q-form .col-sm-4 {
+          display: block;
+          font-size: 10px;
+          text-transform: uppercase;
+          letter-spacing: 0.15em;
+          color: rgba(255,255,255,0.4);
+          margin-bottom: 6px;
+        }
+        .crm-q-form .col-sm-8 { display: block; }
+        .crm-q-form .padding-tb-7,
+        .crm-q-form .padding-lr-5 { padding: 0 !important; }
+        .crm-q-form .form-control,
+        .crm-q-form input[type=text],
+        .crm-q-form input[type=email],
+        .crm-q-form input[type=tel],
+        .crm-q-form select,
+        .crm-q-form textarea {
+          width: 100% !important;
+          background: rgba(255,255,255,0.05) !important;
+          border: 1px solid rgba(120,157,190,0.25) !important;
+          border-radius: 8px !important;
+          padding: 10px 14px !important;
+          color: #fff !important;
+          font-size: 13px !important;
+          box-sizing: border-box !important;
+          font-family: inherit !important;
+          outline: none !important;
+          transition: border-color 0.3s;
+        }
+        .crm-q-form .form-control:focus,
+        .crm-q-form input[type=text]:focus,
+        .crm-q-form input[type=email]:focus,
+        .crm-q-form input[type=tel]:focus,
+        .crm-q-form select:focus,
+        .crm-q-form textarea:focus {
+          border-color: rgba(120,157,190,0.6) !important;
+        }
+        .crm-q-form select option { background: #030508; color: #fff; }
+        .crm-q-form .monthselect,
+        .crm-q-form .dayselect,
+        .crm-q-form .yearselect {
+          width: 31% !important;
+          float: left !important;
+          margin: 2px !important;
+          display: inline-block !important;
+        }
+        .crm-q-form .cf { clear: both; display: block; }
+        .crm-q-form textarea { resize: vertical !important; min-height: 100px !important; }
+        .crm-q-form .formbutton {
+          display: block !important;
+          width: 100% !important;
+          padding: 14px 24px !important;
+          background: #789dbe !important;
+          color: #030508 !important;
+          border: none !important;
+          border-radius: 9999px !important;
+          font-size: 11px !important;
+          font-weight: 600 !important;
+          text-transform: uppercase !important;
+          letter-spacing: 0.2em !important;
+          cursor: pointer !important;
+          margin-top: 16px !important;
+          transition: background 0.3s !important;
+          font-family: inherit !important;
+        }
+        .crm-q-form .formbutton:hover { background: #fff !important; }
+        .crm-q-form p { font-size: 11px !important; color: rgba(255,255,255,0.4) !important; }
+        .crm-q-form a { color: #789dbe !important; }
+        .crm-q-form small a { color: #789dbe !important; font-size: 11px !important; }
+        .crm-q-form label.questiontitle {
+          font-size: 12px;
+          color: rgba(255,255,255,0.5);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          flex-wrap: wrap;
+        }
+        .crm-q-form input[type=checkbox] { accent-color: #789dbe; width: 14px; height: 14px; }
+        .crm-q-form .width90hack { width: 100% !important; }
+        .crm-q-form [style*="border: 1px solid #FFFFFF"] { border: none !important; }
+        .crm-q-form [style*="font-size: 10pt"][style*="background-color"] { display: none !important; }
+      `}</style>
+      <div
+        className="crm-q-form"
+        dangerouslySetInnerHTML={{
+          __html: `
+<form style="margin:0;" action="https://mlevententertainmentclientlogin.com/request_information.asp" method="post" name="reqinfoform">
+<div style="padding: 4px 0;">
+
+<div class="form-group">
+  <div class="col-sm-4 padding-tb-7"><div class="padding-lr-5">Event Date*</div></div>
+  <div class="col-sm-8">
+    <span id="date_select" class="metro-table">
+      <select class="monthselect form-control" name="month"><option value="43">Month</option><option value="1">January (1)</option><option value="2">February (2)</option><option value="3">March (3)</option><option value="4">April (4)</option><option value="5">May (5)</option><option value="6">June (6)</option><option value="7">July (7)</option><option value="8">August (8)</option><option value="9">September (9)</option><option value="10">October (10)</option><option value="11">November (11)</option><option value="12">December (12)</option></select>
+      <select class="dayselect form-control" name="day"><option value="43">Day</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select>
+      <select class="yearselect form-control" name="year"><option value="43">Year</option><option value="2025">2025</option><option value="2026">2026</option><option value="2027">2027</option><option value="2028">2028</option><option value="2029">2029</option><option value="2030">2030</option><option value="2031">2031</option><option value="2032">2032</option><option value="2033">2033</option><option value="2034">2034</option><option value="2035">2035</option><option value="2036">2036</option><option value="2037">2037</option><option value="2038">2038</option><option value="2039">2039</option><option value="2040">2040</option></select>
+    </span>
+  </div>
+  <div class="cf"></div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-4 padding-tb-7"><div class="padding-lr-5">First Name*</div></div>
+  <div class="col-sm-8"><input id="first_name" class="form-control width90hack" name="first_name" type="text" /></div>
+  <div class="cf"></div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-4 padding-tb-7"><div class="padding-lr-5">Last Name*</div></div>
+  <div class="col-sm-8"><input id="last_name" class="form-control width90hack" name="last_name" type="text" /></div>
+  <div class="cf"></div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-4 padding-tb-7"><div class="padding-lr-5">Email Address*</div></div>
+  <div class="col-sm-8"><input id="email" class="form-control width90hack" name="email" type="email" /></div>
+  <div class="cf"></div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-4 padding-tb-7"><div class="padding-lr-5">Contact Number*</div></div>
+  <div class="col-sm-8"><input id="telephone" class="form-control width90hack" name="telephone" type="tel" /></div>
+  <div class="cf"></div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-4 padding-tb-7"><div class="padding-lr-5">Type Of Event*</div></div>
+  <div class="col-sm-8">
+    <select class="form-control responsive-form-select" name="event_type">
+      <option value="">Please select...</option>
+      <option>Wedding Celebration</option><option>Rehearsal Dinner</option><option>Festival</option>
+      <option>Birthday Party</option><option>Corporate Event</option><option>Charity/Fundraiser</option>
+      <option>Graduation Celebration</option><option>Night Club / Bar Dance</option><option>Private Party</option>
+      <option>Anniversary</option><option>DJ Services</option><option>Other / Not Listed</option>
+    </select>
+  </div>
+  <div class="cf"></div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-4 padding-tb-7"><div class="padding-lr-5">Desired Package*</div></div>
+  <div class="col-sm-8">
+    <select class="form-control responsive-form-select" name="packageid">
+      <option value="0">Select a package...</option>
+      <option value="64214">Cold Spark Machines</option>
+      <option value="64203">DJ Services</option>
+      <option value="64196">Other/Not Listed</option>
+      <option value="64210">Photo Booth Services</option>
+      <option value="64205">Rehearsal Dinner</option>
+      <option value="64219">Wedding - Full Service Package</option>
+      <option value="63927">Wedding - Reception Package</option>
+      <option value="64208">Wedding - Ultimate Full Service Package</option>
+      <option value="64207">Wedding - Ultimate Reception Package</option>
+    </select>
+  </div>
+  <div class="cf"></div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-4 padding-tb-7"><div class="padding-lr-5">Additional Questions or Info</div></div>
+  <div class="col-sm-8"><textarea class="form-control width90hack" cols="25" name="additional_information" rows="5"></textarea></div>
+  <div class="cf"></div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-4 padding-tb-7"><div class="padding-lr-5">How did you hear about us?</div></div>
+  <div class="col-sm-8"><input class="form-control width90hack" maxlength="50" name="req_source" type="text" /></div>
+  <div class="cf"></div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-4 padding-tb-7"><div class="padding-lr-5">We are considering Photo Booth*<input id="q1_required" name="q1_required" type="hidden" value="TRUE" /></div></div>
+  <div class="col-sm-8"><select class="form-control width90hack" name="question_1"><option value="">Please select...</option><option>Yes</option><option>No</option><option>Maybe</option></select></div>
+  <div class="cf"></div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-4 padding-tb-7"><div class="padding-lr-5">We are considering Venue Uplighting*<input id="q2_required" name="q2_required" type="hidden" value="TRUE" /></div></div>
+  <div class="col-sm-8"><select class="form-control width90hack" name="question_2"><option value="">Please select...</option><option>Yes</option><option>No</option><option>Maybe</option><option>What Is Venue Uplighting?</option></select></div>
+  <div class="cf"></div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-4 padding-tb-7"><div class="padding-lr-5">We are considering Cold Spark Machines*<input id="q3_required" name="q3_required" type="hidden" value="TRUE" /></div></div>
+  <div class="col-sm-8"><select class="form-control width90hack" name="question_3"><option value="">Please select...</option><option>Yes</option><option>No</option><option>Maybe</option><option>What Are Cold Spark Machines?</option></select></div>
+  <div class="cf"></div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-4 padding-tb-7"><div class="padding-lr-5">Venue Name*<input id="q4_required" name="q4_required" type="hidden" value="TRUE" /></div></div>
+  <div class="col-sm-8"><input class="form-control width90hack" maxlength="250" name="question_4" size="30" type="text" /></div>
+  <div class="cf"></div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-4 padding-tb-7"><div class="padding-lr-5">Venue Location (state/city)*<input id="q5_required" name="q5_required" type="hidden" value="TRUE" /></div></div>
+  <div class="col-sm-8"><input class="form-control width90hack" maxlength="250" name="question_5" size="30" type="text" /></div>
+  <div class="cf"></div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-4 padding-tb-7"><div class="padding-lr-5">Are You*<input id="q6_required" name="q6_required" type="hidden" value="TRUE" /></div></div>
+  <div class="col-sm-8">
+    <select class="form-control width90hack" name="question_6">
+      <option value="">Please select...</option>
+      <option>The Bride</option><option>The Groom</option><option>The Partner</option>
+      <option>Mother Of The Bride</option><option>Mother Of The Groom</option>
+      <option>Father Of The Bride</option><option>Father Of The Groom</option>
+      <option>Friend</option><option>Relative</option><option>Event Planner</option>
+      <option>Corporate Client</option><option>Private Party Client</option><option>Previous Client</option>
+      <option>Venue Owner</option><option>Venue Manager</option><option>Venue Promoter</option><option>Other</option>
+    </select>
+  </div>
+  <div class="cf"></div>
+</div>
+
+<div class="form-group" style="text-align:center; margin-top:24px;">
+  <label class="questiontitle">
+    <input name="privacy_policy" type="checkbox" value="true" />
+    Please tick this box to agree to our Privacy Policy
+  </label>
+  <small><a href="https://mlevententertainmentclientlogin.com/privacy.asp?djidnumber=23261&view=websitetools" target="_blank" rel="noopener">(Click To View)</a></small>
+</div>
+
+<input name="checkdate" type="hidden" value="" />
+<input name="djidnumber" type="hidden" value="23261" />
+<input name="action" type="hidden" value="add_information_request" />
+</div>
+<p align="center"><input class="formbutton" name="submit" type="submit" value="Submit" /></p>
+</form>
+`,
+        }}
+      />
+    </>
+  )
+}
 
 export function GetQuotePageContent() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    eventDate: "",
-    venue: "",
-    guestCount: "",
-    eventType: "wedding",
-    services: [] as string[],
-    message: "",
-  })
-
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitted, setSubmitted] = useState(false)
-
-  const handleServiceToggle = (serviceId: string) => {
-    setFormData((prev) => ({
-      ...prev,
-      services: prev.services.includes(serviceId)
-        ? prev.services.filter((s) => s !== serviceId)
-        : [...prev.services, serviceId],
-    }))
-  }
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    try {
-      const res = await fetch("https://formspree.io/f/FORMSPREE_ID", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          eventDate: formData.eventDate,
-          venue: formData.venue,
-          guestCount: formData.guestCount,
-          eventType: formData.eventType,
-          services: formData.services.join(", "),
-          message: formData.message,
-        }),
-      })
-      if (res.ok) {
-        setSubmitted(true)
-      } else {
-        alert("Something went wrong. Please email us directly at mikeylee@mlevententertainment.com")
-      }
-    } catch {
-      alert("Something went wrong. Please email us directly at mikeylee@mlevententertainment.com")
-    }
-    setIsSubmitting(false)
-  }
-
-  if (submitted) {
-    return (
-      <section className="min-h-screen flex items-center justify-center px-6 lg:px-16 pt-32">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="text-center max-w-lg"
-        >
-          <div className="w-20 h-20 rounded-full bg-[#789dbe]/20 flex items-center justify-center mx-auto mb-8">
-            <Mail className="w-10 h-10 text-[#789dbe]" />
-          </div>
-          <h2 className="font-serif text-4xl md:text-5xl text-white mb-6">
-            Thank <span className="italic text-[#789dbe]">You!</span>
-          </h2>
-          <p className="text-white/60 text-lg mb-8">
-            We&apos;ve received your inquiry and will get back to you within 24-48 hours. We can&apos;t wait to learn
-            more about your celebration!
-          </p>
-          <a
-            href="/"
-            className="inline-block px-10 py-4 bg-[#789dbe] text-[#030508] text-sm uppercase tracking-[0.2em] font-medium rounded-full hover:bg-white transition-all duration-500"
-          >
-            Return Home
-          </a>
-        </motion.div>
-      </section>
-    )
-  }
-
   return (
     <>
       {/* Hero Section */}
@@ -118,237 +289,23 @@ export function GetQuotePageContent() {
       </section>
 
       {/* Form Section */}
-      <section className="py-16 lg:py-24 px-6 lg:px-16">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-3 gap-16">
-            {/* Form */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="lg:col-span-2"
-            >
-              <form onSubmit={handleSubmit} className="space-y-8">
-                {/* Personal Info */}
-                <div>
-                  <h3 className="font-serif text-xl text-white mb-6 pb-4 border-b border-[#789dbe]/20">
-                    Your Information
-                  </h3>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-white/50 text-xs uppercase tracking-[0.2em] mb-2">Full Name *</label>
-                      <input
-                        type="text"
-                        required
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full bg-transparent border border-[#789dbe]/30 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:border-[#789dbe] focus:outline-none transition-colors"
-                        placeholder="Your name"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-white/50 text-xs uppercase tracking-[0.2em] mb-2">Email *</label>
-                      <input
-                        type="email"
-                        required
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full bg-transparent border border-[#789dbe]/30 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:border-[#789dbe] focus:outline-none transition-colors"
-                        placeholder="your@email.com"
-                      />
-                    </div>
-                    <div className="md:col-span-2">
-                      <label className="block text-white/50 text-xs uppercase tracking-[0.2em] mb-2">Phone</label>
-                      <input
-                        type="tel"
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full bg-transparent border border-[#789dbe]/30 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:border-[#789dbe] focus:outline-none transition-colors"
-                        placeholder="(555) 123-4567"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Event Details */}
-                <div>
-                  <h3 className="font-serif text-xl text-white mb-6 pb-4 border-b border-[#789dbe]/20">
-                    Event Details
-                  </h3>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-white/50 text-xs uppercase tracking-[0.2em] mb-2">
-                        <Calendar className="w-4 h-4 inline mr-2" />
-                        Event Date *
-                      </label>
-                      <input
-                        type="date"
-                        required
-                        value={formData.eventDate}
-                        onChange={(e) => setFormData({ ...formData, eventDate: e.target.value })}
-                        className="w-full bg-transparent border border-[#789dbe]/30 rounded-lg px-4 py-3 text-white focus:border-[#789dbe] focus:outline-none transition-colors"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-white/50 text-xs uppercase tracking-[0.2em] mb-2">
-                        <Users className="w-4 h-4 inline mr-2" />
-                        Guest Count
-                      </label>
-                      <select
-                        value={formData.guestCount}
-                        onChange={(e) => setFormData({ ...formData, guestCount: e.target.value })}
-                        className="w-full bg-[#030508] border border-[#789dbe]/30 rounded-lg px-4 py-3 text-white focus:border-[#789dbe] focus:outline-none transition-colors"
-                      >
-                        <option value="">Select guest count</option>
-                        <option value="under50">Under 50</option>
-                        <option value="50-100">50-100</option>
-                        <option value="100-150">100-150</option>
-                        <option value="150-200">150-200</option>
-                        <option value="200+">200+</option>
-                      </select>
-                    </div>
-                    <div className="md:col-span-2">
-                      <label className="block text-white/50 text-xs uppercase tracking-[0.2em] mb-2">
-                        <MapPin className="w-4 h-4 inline mr-2" />
-                        Venue Name & Location
-                      </label>
-                      <input
-                        type="text"
-                        value={formData.venue}
-                        onChange={(e) => setFormData({ ...formData, venue: e.target.value })}
-                        className="w-full bg-transparent border border-[#789dbe]/30 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:border-[#789dbe] focus:outline-none transition-colors"
-                        placeholder="Venue name, City"
-                      />
-                    </div>
-                    <div className="md:col-span-2">
-                      <label className="block text-white/50 text-xs uppercase tracking-[0.2em] mb-2">Event Type</label>
-                      <div className="flex flex-wrap gap-4">
-                        {["wedding", "corporate", "private", "other"].map((type) => (
-                          <button
-                            key={type}
-                            type="button"
-                            onClick={() => setFormData({ ...formData, eventType: type })}
-                            className={`px-6 py-2 rounded-full border text-sm uppercase tracking-[0.15em] transition-all duration-300 ${
-                              formData.eventType === type
-                                ? "bg-[#789dbe] border-[#789dbe] text-[#030508]"
-                                : "border-[#789dbe]/30 text-white/70 hover:border-[#789dbe]"
-                            }`}
-                          >
-                            {type}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Services */}
-                <div>
-                  <h3 className="font-serif text-xl text-white mb-6 pb-4 border-b border-[#789dbe]/20">
-                    Services Interested In
-                  </h3>
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                    {services.map((service) => (
-                      <button
-                        key={service.id}
-                        type="button"
-                        onClick={() => handleServiceToggle(service.id)}
-                        className={`p-4 rounded-xl border text-left transition-all duration-300 ${
-                          formData.services.includes(service.id)
-                            ? "bg-[#789dbe]/20 border-[#789dbe] text-white"
-                            : "border-[#789dbe]/20 text-white/50 hover:border-[#789dbe]/50"
-                        }`}
-                      >
-                        <service.icon
-                          className={`w-5 h-5 mb-2 ${formData.services.includes(service.id) ? "text-[#789dbe]" : ""}`}
-                        />
-                        <span className="text-sm">{service.label}</span>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Message */}
-                <div>
-                  <h3 className="font-serif text-xl text-white mb-6 pb-4 border-b border-[#789dbe]/20">
-                    Additional Details
-                  </h3>
-                  <textarea
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    rows={5}
-                    className="w-full bg-transparent border border-[#789dbe]/30 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:border-[#789dbe] focus:outline-none transition-colors resize-none"
-                    placeholder="Tell us about your vision for the event, any special requests, or questions you have..."
-                  />
-                </div>
-
-                {/* Submit */}
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full px-10 py-5 bg-[#789dbe] text-[#030508] text-sm uppercase tracking-[0.2em] font-medium rounded-full hover:bg-white transition-all duration-500 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? "Sending..." : "Submit Request"}
-                </button>
-              </form>
-            </motion.div>
-
-            {/* Contact Info Sidebar */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="space-y-8"
-            >
-              <div className="glass rounded-2xl p-8">
-                <h3 className="font-serif text-xl text-white mb-6">Prefer to Talk?</h3>
-                <div className="space-y-6">
-                  <a
-                    href="mailto:hello@mlevententertainment.com"
-                    className="flex items-center gap-4 text-white/60 hover:text-[#789dbe] transition-colors group"
-                  >
-                    <div className="w-12 h-12 rounded-full bg-[#789dbe]/10 flex items-center justify-center group-hover:bg-[#789dbe]/20 transition-colors">
-                      <Mail className="w-5 h-5 text-[#789dbe]" />
-                    </div>
-                    <div>
-                      <p className="text-xs uppercase tracking-[0.2em] text-white/40 mb-1">Email</p>
-                      <p className="text-sm">hello@mlevententertainment.com</p>
-                    </div>
-                  </a>
-                  <a
-                    href="tel:+18431234567"
-                    className="flex items-center gap-4 text-white/60 hover:text-[#789dbe] transition-colors group"
-                  >
-                    <div className="w-12 h-12 rounded-full bg-[#789dbe]/10 flex items-center justify-center group-hover:bg-[#789dbe]/20 transition-colors">
-                      <Phone className="w-5 h-5 text-[#789dbe]" />
-                    </div>
-                    <div>
-                      <p className="text-xs uppercase tracking-[0.2em] text-white/40 mb-1">Phone</p>
-                      <p className="text-sm">(843) 123-4567</p>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
-              <div className="glass rounded-2xl p-8">
-                <h3 className="font-serif text-xl text-white mb-4">Response Time</h3>
-                <div className="flex items-center gap-3 text-white/60">
-                  <Clock className="w-5 h-5 text-[#789dbe]" />
-                  <p className="text-sm">We respond within 24-48 hours</p>
-                </div>
-              </div>
-
-              <div className="glass rounded-2xl p-8 glow">
-                <p className="text-[#789dbe] text-xs uppercase tracking-[0.2em] mb-3">Pro Tip</p>
-                <p className="text-white/60 text-sm leading-relaxed">
-                  Book early! Popular dates fill up 6-12 months in advance, especially for peak wedding season
-                  (April-October).
-                </p>
-              </div>
-            </motion.div>
-          </div>
+      <section className="pb-24 lg:pb-32 px-6 lg:px-16">
+        <div className="max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9 }}
+            viewport={{ once: true }}
+          >
+            <div className="glass rounded-3xl p-8 lg:p-12">
+              <p className="text-[#789dbe] text-xs uppercase tracking-[0.3em] mb-4">Questionnaire</p>
+              <p className="text-white/60 text-base leading-relaxed mb-10">
+                Please fill out this short questionnaire to better help us understand what ML Event Entertainment
+                services you are interested in and how we can help you throw the best party yet!
+              </p>
+              <CRMQuestionnaireForm />
+            </div>
+          </motion.div>
         </div>
       </section>
     </>
