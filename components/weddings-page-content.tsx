@@ -69,12 +69,12 @@ const packages = [
 
 
 const galleryImages = [
-  { src: "https://mlevententertainment.com/wp-content/uploads/2026/06/Natalie-Hunter-Wedding-727-scaled.jpg", alt: "Packed wedding reception" },
-  { src: "https://mlevententertainment.com/wp-content/uploads/2025/07/Screenshot-2025-07-28-at-14.38.41.png", alt: "Couple dancing and singing" },
-  { src: "https://mlevententertainment.com/wp-content/uploads/2026/06/Weddings-Ml-event-entertainment_-1.png", alt: "First dance at outdoor venue" },
+  { src: "/images/Natalie-Hunter-Wedding-727-scaled.jpg", alt: "Packed wedding reception" },
+  { src: "/images/Screenshot-2025-07-28-at-14.38.41.png", alt: "Couple dancing and singing" },
+  { src: "/images/Weddings-Ml-event-entertainment_-1.png", alt: "First dance at outdoor venue" },
   { src: "/images/wedding-first-dance-dip-bw.jpg", alt: "Wedding dip kiss" },
   { src: "/images/bride-at-dj-decks.jpg", alt: "Bride having a go at the decks" },
-  { src: "https://mlevententertainment.com/wp-content/uploads/2026/06/Triola-1114.jpg", alt: "Cold sparks send-off" },
+  { src: "/images/Triola-1114.jpg", alt: "Cold sparks send-off" },
   { src: "/images/bride-heart-sunglasses-bw.png", alt: "Bride dancing in heart sunglasses" },
   { src: "/images/wedding-glow-sticks.png", alt: "Guests with LED glow sticks" },
   { src: "/images/wedding-bride-green-uplighting.png", alt: "Bride dancing with uplighting" },

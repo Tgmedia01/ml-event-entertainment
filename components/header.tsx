@@ -64,7 +64,7 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <img
-              src="https://mlevententertainment.com/wp-content/uploads/2025/06/ml-event-entertainment-logo-scaled.webp"
+              src="/images/ml-event-entertainment-logo-scaled.webp"
               alt="ML Event Entertainment"
               className="h-10 w-auto object-contain"
               onError={(e) => {

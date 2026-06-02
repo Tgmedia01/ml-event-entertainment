@@ -26,18 +26,18 @@ const included = [
 ]
 
 const backdrops = [
-  { name: "Gold Sequin", src: "https://mlevententertainment.com/wp-content/uploads/2025/07/Gold-Sequin-.png" },
-  { name: "Botanical Garden", src: "https://mlevententertainment.com/wp-content/uploads/2025/07/Botanical-Garden-.png" },
-  { name: "Wedding Curtain", src: "https://mlevententertainment.com/wp-content/uploads/2025/07/Wedding-Curtain-.png" },
-  { name: "Plain White", src: "https://mlevententertainment.com/wp-content/uploads/2025/07/White-.png" },
-  { name: "Gold Geometric", src: "https://mlevententertainment.com/wp-content/uploads/2025/07/Gold-Geometric-.png" },
-  { name: "Green Screen", src: "https://mlevententertainment.com/wp-content/uploads/2025/07/Green-Screen-.png" },
-  { name: "Black", src: "https://mlevententertainment.com/wp-content/uploads/2025/07/Black-.png" },
-  { name: "White Geometric", src: "https://mlevententertainment.com/wp-content/uploads/2025/07/White-Geometric-Texture-.png" },
-  { name: "Red Brick Wall", src: "https://mlevententertainment.com/wp-content/uploads/2025/07/Red-Bricl-Wall-.png" },
-  { name: "Golden Lattice", src: "https://mlevententertainment.com/wp-content/uploads/2025/07/Golden-Lattice-.png" },
-  { name: "Champagne Glitter", src: "https://mlevententertainment.com/wp-content/uploads/2025/07/Champagne-Glitter-.png" },
-  { name: "Golden Trefoils", src: "https://mlevententertainment.com/wp-content/uploads/2025/07/Golden-Trefoils-.png" },
+  { name: "Gold Sequin", src: "/images/Gold-Sequin-.png" },
+  { name: "Botanical Garden", src: "/images/Botanical-Garden-.png" },
+  { name: "Wedding Curtain", src: "/images/Wedding-Curtain-.png" },
+  { name: "Plain White", src: "/images/White-.png" },
+  { name: "Gold Geometric", src: "/images/Gold-Geometric-.png" },
+  { name: "Green Screen", src: "/images/Green-Screen-.png" },
+  { name: "Black", src: "/images/Black-.png" },
+  { name: "White Geometric", src: "/images/White-Geometric-Texture-.png" },
+  { name: "Red Brick Wall", src: "/images/Red-Bricl-Wall-.png" },
+  { name: "Golden Lattice", src: "/images/Golden-Lattice-.png" },
+  { name: "Champagne Glitter", src: "/images/Champagne-Glitter-.png" },
+  { name: "Golden Trefoils", src: "/images/Golden-Trefoils-.png" },
 ]
 
 const containerVariants = {
@@ -103,7 +103,7 @@ export function PhotoBoothPageContent() {
           >
             <div className="relative rounded-2xl overflow-hidden">
               <img
-                src="https://mlevententertainment.com/wp-content/uploads/2025/07/Ml-Event-Photobooth.png"
+                src="/images/Ml-Event-Photobooth.png"
                 alt="ML Event Entertainment Photo Booth"
                 className="w-full h-auto object-contain"
                 onError={(e) => {

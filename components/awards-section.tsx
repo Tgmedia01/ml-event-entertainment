@@ -6,7 +6,7 @@ const awards = [
   { src: "/images/award-the-knot-hall-of-fame.png", alt: "The Knot Hall of Fame", href: "https://www.theknot.com/marketplace/ml-event-entertainment-hanahan-sc-2040669" },
   { src: "/images/award-the-knot-best-weddings.png", alt: "The Knot Best of Weddings", href: "https://www.theknot.com/marketplace/ml-event-entertainment-hanahan-sc-2040669" },
   { src: "/images/award-weddingwire-couples-choice.png", alt: "WeddingWire Couples Choice", href: "https://www.weddingwire.com/reviews/ml-event-entertainment/9456544ce61db414.html" },
-  { src: "https://mlevententertainment.com/wp-content/uploads/2026/06/Charleston-Choice-Email-Signature-Logo-300px-1.png", alt: "Charleston's Choice Winner", href: "#" },
+  { src: "/images/Charleston-Choice-Email-Signature-Logo-300px-1.png", alt: "Charleston's Choice Winner", href: "#" },
 ]
 
 export function AwardsSection() {

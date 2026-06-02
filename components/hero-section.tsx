@@ -21,7 +21,7 @@ export function HeroSection() {
         poster="/images/wedding-dance-floor-couple.png"
       >
         <source
-          src="https://mlevententertainment.com/wp-content/uploads/2025/06/ml-event-entertainment-charleston-dj-services-video.mp4"
+          src="/images/ml-event-entertainment-charleston-dj-services-video.mp4"
           type="video/mp4"
         />
         <img

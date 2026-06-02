@@ -34,7 +34,7 @@ const awards = [
     year: "2019 to 2026",
   },
   {
-    src: "https://mlevententertainment.com/wp-content/uploads/2026/06/Charleston-Choice-Email-Signature-Logo-300px-1.png",
+    src: "/images/Charleston-Choice-Email-Signature-Logo-300px-1.png",
     alt: "Charleston\'s Choice Winner",
     href: "#",
     label: "Charleston\'s Choice",
@@ -52,19 +52,19 @@ const team = [
   {
     name: "Katelin McTigue",
     role: "Director of Operations",
-    image: "https://mlevententertainment.com/wp-content/uploads/2025/07/Katelin-M-Headshots-scaled.png",
+    image: "/images/Katelin-M-Headshots-scaled.png",
     bio: "Katelin McTigue is the Director of Operations at ML Event Entertainment and the organizational force behind the scenes. As the wife of founder Mikey Lee, she plays a key role in the client experience. Katelin's background in event planning and sales brings a wealth of experience to her role, allowing her to expertly guide clients with professionalism, warmth, and efficiency. Her strong communication skills and attention to detail ensure that every event starts off on the right foot.",
   },
   {
     name: "Davis",
     role: "DJ",
-    image: "https://mlevententertainment.com/wp-content/uploads/2025/07/rsw_1200h_1200cg_true.webp",
+    image: "/images/rsw_1200h_1200cg_true.webp",
     bio: "DJ Davis is a highly sought after talent known for his passion, professionalism, and commitment to delivering top tier entertainment. As a trusted member of the ML Event Entertainment team, Davis shares founder Mikey Lee's dedication to excellence bringing the same high quality experience to every event he performs. With an innate ability to read the room and curate unforgettable moments through music, DJ Davis specialises in creating an atmosphere that is both electric and deeply personal.",
   },
   {
     name: "Aaron",
     role: "DJ AARO",
-    image: "https://mlevententertainment.com/wp-content/uploads/2026/05/rsw_1200h_1200cg_true.png",
+    image: "/images/rsw_1200h_1200cg_true-mikey.png",
     bio: "With over 15 years of experience behind the decks, DJ AARO has built a reputation for delivering high-energy, unforgettable events with a personal touch. He brings passion, professionalism, and nonstop fun to every celebration. Originally honing his craft in New Jersey before bringing his talents to Charleston, South Carolina, DJ AARO developed a deep appreciation for all music genres and knows how to create a soundtrack that connects with every crowd. Whether it's timeless classics, current hits, or throwback anthems, he knows how to keep the dance floor packed all night long. Known for his infectious personality and ability to truly read the room, DJ AARO works closely with every client to bring their vision to life and ensure every detail feels seamless from start to finish.",
   },
 ]

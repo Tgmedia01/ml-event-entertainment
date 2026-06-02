@@ -37,7 +37,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-6" data-cursor="pointer">
               <img
-                src="https://mlevententertainment.com/wp-content/uploads/2025/06/ml-event-entertainment-logo-scaled.webp"
+                src="/images/ml-event-entertainment-logo-scaled.webp"
                 alt="ML Event Entertainment"
                 className="h-14 w-auto object-contain"
                 onError={(e) => {
