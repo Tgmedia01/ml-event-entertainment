@@ -86,7 +86,7 @@ export function WeddingsPageContent() {
       {/* Hero */}
       <section className="relative min-h-[80vh] flex items-end pb-16 lg:pb-24 pt-32 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/images/cold-sparks-bride-groom.png" alt="Wedding reception with cold sparks" className="w-full h-full object-cover object-[center_30%]" style={{objectPosition: "center 30%"}} />
+          <img src="/images/Olsen-Wedding-Seabrook-Island-5956 (1).jpg" alt="Wedding reception with cold sparks" className="w-full h-full object-cover object-[center_30%]" style={{objectPosition: "center 30%"}} />
           <div className="absolute inset-0 bg-gradient-to-t from-[#030508] via-[#030508]/50 to-[#004563]/40" />
         </div>
         <div className="relative z-10 px-6 lg:px-16 w-full">

@@ -33,7 +33,7 @@ const addOns = [
       "Dramatic visual impact on photos and video",
     ],
     images: [
-      { src: "/images/wedding-cold-sparks-bubbles-sendoff.jpg", caption: "Grand send-off with cold sparks and bubbles" },
+      { src: "/images/Nicole-Thomas-1675.jpg", caption: "Grand send-off with cold sparks and bubbles" },
       { src: "/images/wedding-cold-sparks-street.jpg", caption: "Outdoor cold spark moment" },
       { src: "/images/cold-sparks-bride-groom.png", caption: "First dance cold sparks" },
     ],
@@ -61,9 +61,9 @@ const addOns = [
       "Personalised event branding on prints",
     ],
     images: [
-      { src: "/images/photo-booth-group-props.png", caption: "Guests having a blast" },
+      { src: "/images/reception(293).jpg", caption: "Guests having a blast" },
       { src: "/images/photo-booth-mirror.png", caption: "Mirror front in action" },
-      { src: "/images/photo-booth-props-married.png", caption: "Fun props selection" },
+      { src: "/images/reception(293).jpg", caption: "Fun props selection" },
     ],
     cta: "Add Photo Booth",
   },
@@ -85,9 +85,9 @@ const addOns = [
       "Elegant or party vibe settings",
     ],
     images: [
-      { src: "/images/wedding-first-dance-outdoor.jpg", caption: "Outdoor venue uplighting" },
-      { src: "/wedding-venue-uplighting-purple-blue-ambient-elega.jpg", caption: "Purple and blue ambient uplighting" },
-      { src: "/images/mikey-davis-bride-uplighting.png", caption: "Uplighting in action" },
+      { src: "/images/748612_7157284f603845e18b75ff233120f50b_mv2-scaled.jpg", caption: "Indoor venue uplighting" },
+      { src: "/images/McKissick_4.jpg", caption: "Purple and blue ambient uplighting" },
+      { src: "/images/wedding-first-dance-outdoor.jpg", caption: "Uplighting in action" },
     ],
     cta: "Add Uplighting",
   },
@@ -109,9 +109,9 @@ const addOns = [
       "Club quality production",
     ],
     images: [
-      { src: "/images/wedding-reception-crowd-tent.jpg", caption: "Packed dance floor" },
-      { src: "/images/wedding-couple-dancing-singing.jpg", caption: "Couple on the floor" },
-      { src: "/wedding-dj-party-dance-floor-crowd-celebration-pur.jpg", caption: "Dance floor lighting" },
+      { src: "/images/DSC00641-2.jpg", caption: "Packed dance floor" },
+      { src: "/images/Nicole-Thomas-1649.jpg", caption: "Couple on the floor" },
+      { src: "/images/s_wphotography_ashleytony_1393.jpg", caption: "Dance floor lighting" },
     ],
     cta: "Included in All Packages",
     included: true,
@@ -125,7 +125,7 @@ export function AddOnsPageContent() {
       <section className="relative min-h-[60vh] lg:min-h-[70vh] flex items-end pb-16 lg:pb-24 pt-32 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/wedding-cold-sparks-bubbles-sendoff.jpg"
+            src="/images/Nicole-Thomas-1675.jpg"
             alt="Wedding add-ons in action"
             className="w-full h-full object-cover object-center"
           />

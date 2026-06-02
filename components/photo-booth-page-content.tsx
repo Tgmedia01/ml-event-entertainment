@@ -136,7 +136,7 @@ export function PhotoBoothPageContent() {
           className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto"
         >
           {[
-            { src: "/images/photo-booth-group-props.png", caption: "Fun for everyone" },
+            { src: "/images/reception(275).jpg", caption: "Fun for everyone" },
             { src: "/images/photo-booth-props-married.png", caption: "Wedding props included" },
             { src: "/images/photo-booth-props-cheers.png", caption: "Huge props selection" },
           ].map((item, i) => (

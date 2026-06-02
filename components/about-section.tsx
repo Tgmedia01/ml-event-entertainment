@@ -100,7 +100,7 @@ export function AboutSection() {
               <p className="text-[#789dbe] text-xs uppercase tracking-[0.3em] mb-4">Meet Your DJ</p>
               <h3 className="font-serif text-2xl text-white mb-4">Mikey Lee</h3>
               <p className="text-white/50 leading-relaxed mb-4">
-                Mikey Lee is the founder and lead DJ of ML Event Entertainment, bringing over 15 years of full-time DJ
+                Mikey Lee is the founder and lead DJ of ML Event Entertainment, bringing over 20 years of full-time DJ
                 experience to weddings, private events, and parties around the world. His career has taken him across
                 Europe, the United States, and aboard some of the largest cruise ships sailing today covering London,
                 Ibiza, Miami, and Los Angeles along the way.
