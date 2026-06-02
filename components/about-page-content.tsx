@@ -87,9 +87,9 @@ export function AboutPageContent() {
           <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
             <p className="text-[#789dbe] uppercase tracking-[0.4em] text-xs mb-6">Our Story</p>
             <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-white leading-[0.85]">
-              THE ART OF
+              WHO WE ARE AND
               <br />
-              <span className="italic text-[#789dbe] text-glow">THE VIBE</span>
+              <span className="italic text-[#789dbe] text-glow">WHAT WE DO</span>
             </h1>
           </motion.div>
         </div>
