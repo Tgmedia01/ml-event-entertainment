@@ -1,37 +1,105 @@
 "use client"
 
+import { useEffect } from "react"
 import { motion } from "framer-motion"
-import { Music, Clock, FileText, MessageSquare, ExternalLink, Shield, CheckCircle } from "lucide-react"
+import { Shield } from "lucide-react"
+import Link from "next/link"
 
-const portalFeatures = [
-  {
-    icon: Music,
-    title: "Music Planner",
-    description:
-      "Create your 'Must Play' and 'Do Not Play' lists. Browse our extensive music library by genre and era.",
-  },
-  {
-    icon: Clock,
-    title: "Timeline Builder",
-    description: "Collaborate on your event timeline. Mark special moments and coordinate with your vendors.",
-  },
-  {
-    icon: FileText,
-    title: "Documents",
-    description: "Access your contract, invoices, and any important documents related to your event.",
-  },
-  {
-    icon: MessageSquare,
-    title: "Direct Messaging",
-    description: "Communicate directly with your DJ and our team. Ask questions and share updates.",
-  },
-]
+function CRMLoginForm() {
+  useEffect(() => {
+    // Inject the CRM stylesheet
+    const link = document.createElement("link")
+    link.rel = "stylesheet"
+    link.href = "https://mlevententertainmentclientlogin.com/includes/style-responsivetools-min.css"
+    link.id = "crm-login-css"
+    document.head.appendChild(link)
 
-const steps = [
-  { step: "01", title: "Book Your Event", description: "Sign your contract and submit your retainer" },
-  { step: "02", title: "Receive Login", description: "We'll email your private portal credentials" },
-  { step: "03", title: "Start Planning", description: "Access all planning tools and features" },
-]
+    return () => {
+      const existing = document.getElementById("crm-login-css")
+      if (existing) existing.remove()
+    }
+  }, [])
+
+  return (
+    <div className="crm-login-wrapper">
+      <style>{`
+        .crm-login-wrapper .djepcode { all: unset; display: block; }
+        .crm-login-wrapper .container { max-width: 100% !important; padding: 0 !important; }
+        .crm-login-wrapper .panel {
+          background: transparent !important;
+          border: none !important;
+          box-shadow: none !important;
+          color: #cbd5e1 !important;
+          font-family: inherit !important;
+        }
+        .crm-login-wrapper .panel-heading { display: none !important; }
+        .crm-login-wrapper .panel-body { padding: 0 !important; }
+        .crm-login-wrapper .form-group { margin-bottom: 20px; }
+        .crm-login-wrapper label {
+          display: block;
+          font-size: 11px !important;
+          text-transform: uppercase !important;
+          letter-spacing: 0.15em !important;
+          color: rgba(255,255,255,0.4) !important;
+          margin-bottom: 8px !important;
+          font-family: inherit !important;
+        }
+        .crm-login-wrapper .form-control,
+        .crm-login-wrapper input[type=text],
+        .crm-login-wrapper input[type=password] {
+          width: 100% !important;
+          background: rgba(255,255,255,0.05) !important;
+          border: 1px solid rgba(120,157,190,0.25) !important;
+          border-radius: 8px !important;
+          padding: 12px 16px !important;
+          color: #fff !important;
+          font-size: 14px !important;
+          font-family: inherit !important;
+          box-sizing: border-box !important;
+          outline: none !important;
+          transition: border-color 0.3s !important;
+        }
+        .crm-login-wrapper .form-control:focus,
+        .crm-login-wrapper input[type=text]:focus,
+        .crm-login-wrapper input[type=password]:focus {
+          border-color: rgba(120,157,190,0.6) !important;
+        }
+        .crm-login-wrapper .btn-lg.btn-block {
+          display: block !important;
+          width: 100% !important;
+          padding: 14px 24px !important;
+          background: #789dbe !important;
+          color: #030508 !important;
+          border: none !important;
+          border-radius: 9999px !important;
+          font-size: 11px !important;
+          font-weight: 600 !important;
+          text-transform: uppercase !important;
+          letter-spacing: 0.2em !important;
+          cursor: pointer !important;
+          margin-top: 8px !important;
+          transition: background 0.3s !important;
+          font-family: inherit !important;
+        }
+        .crm-login-wrapper .btn-lg.btn-block:hover { background: #fff !important; }
+        .crm-login-wrapper p { text-align: center; margin-top: 16px; }
+        .crm-login-wrapper p a {
+          color: #789dbe !important;
+          font-size: 13px !important;
+          text-decoration: none !important;
+        }
+        .crm-login-wrapper p a:hover { color: #fff !important; }
+      `}</style>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: `
+<div class="djepcode"><div class="container"><div class="panel"><div class="panel-heading"><h3 class="panel-title">Client Logon</h3></div><div class="panel-body"><form role="form" name="logonform" action="https://mlevententertainmentclientlogin.com/clientlogon.asp?djidnumber=23261" method="post"><div class="form-group"><label for="username">Username</label><input type="text" name="username" class="form-control input-lg" id="username" placeholder="Enter your username"></div><div class="form-group"><label for="password">Password</label><input type="password" name="password" class="form-control input-lg" id="password" placeholder="Enter your password"></div><button type="submit" name="submit" class="btn-lg btn-block btn-default">Login to Portal</button></form></div></div><p align="center"><a href="javascript:void(0)" onclick="window.open('https://mlevententertainmentclientlogin.com/sendpassword.asp?typeoflogon=client','w','width=350,height=150,menubar=no,scrollbars=no,resizable=yes,location=no,directories=no,status=no'); return false;">Forgot your password?</a></p></div></div>
+          `,
+        }}
+      />
+    </div>
+  )
+}
 
 export function ClientPortalPageContent() {
   return (
@@ -54,122 +122,28 @@ export function ClientPortalPageContent() {
         </div>
       </section>
 
-      {/* Login CTA */}
+      {/* Login Form */}
       <section className="py-16 px-6 lg:px-16">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-lg mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="glass rounded-3xl p-8 lg:p-12 text-center glow"
+            className="glass rounded-3xl p-8 lg:p-12 glow"
           >
-            <div className="w-16 h-16 rounded-full bg-[#789dbe]/20 flex items-center justify-center mx-auto mb-6">
-              <Shield className="w-8 h-8 text-[#789dbe]" />
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-12 h-12 rounded-full bg-[#789dbe]/20 flex items-center justify-center flex-shrink-0">
+                <Shield className="w-6 h-6 text-[#789dbe]" />
+              </div>
+              <div>
+                <p className="text-[#789dbe] text-xs uppercase tracking-[0.3em] mb-1">Secure Login</p>
+                <p className="text-white/50 text-sm">Already a client? Access your planning portal below.</p>
+              </div>
             </div>
-            <h2 className="font-serif text-3xl md:text-4xl text-white mb-4">
-              Already a <span className="italic text-[#789dbe]">Client?</span>
-            </h2>
-            <p className="text-white/60 text-lg mb-8 max-w-lg mx-auto">
-              Access your private event planning portal to manage your music, timeline, and communicate with our team.
-            </p>
-            <a
-              href="https://mlevententertainment.com/client-login/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-10 py-5 bg-[#789dbe] text-[#030508] text-sm uppercase tracking-[0.2em] font-medium rounded-full hover:bg-white transition-all duration-500 hover:shadow-[0_0_40px_rgba(120,157,190,0.5)]"
-            >
-              <span>Login to Portal</span>
-              <ExternalLink className="w-4 h-4" />
-            </a>
-            <p className="text-white/40 text-sm mt-6">
-              Forgot your login?{" "}
-              <a href="mailto:hello@mlevententertainment.com" className="text-[#789dbe] hover:text-white">
-                Contact us
-              </a>
-            </p>
+
+            <CRMLoginForm />
           </motion.div>
-        </div>
-      </section>
-
-      {/* Portal Features */}
-      <section className="py-24 lg:py-32 px-6 lg:px-16">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <p className="text-[#3f566d] text-xs uppercase tracking-[0.4em] mb-6">Planning Tools</p>
-            <h2 className="font-serif text-4xl md:text-5xl text-white">
-              What&apos;s <span className="italic text-[#789dbe]">Inside</span>
-            </h2>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {portalFeatures.map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="glass rounded-2xl p-8 group hover:bg-[#789dbe]/5 transition-colors duration-500"
-              >
-                <div className="flex items-start gap-6">
-                  <div className="w-14 h-14 rounded-xl bg-[#789dbe]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#789dbe]/20 transition-colors">
-                    <feature.icon className="w-6 h-6 text-[#789dbe]" />
-                  </div>
-                  <div>
-                    <h3 className="font-serif text-xl text-white mb-3">{feature.title}</h3>
-                    <p className="text-white/50 leading-relaxed">{feature.description}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* How to Access */}
-      <section className="py-24 lg:py-32 bg-[#004563]/10 px-6 lg:px-16">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <p className="text-[#3f566d] text-xs uppercase tracking-[0.4em] mb-6">Getting Started</p>
-            <h2 className="font-serif text-4xl md:text-5xl text-white">
-              How to <span className="italic text-[#789dbe]">Access</span>
-            </h2>
-          </motion.div>
-
-          <div className="space-y-8">
-            {steps.map((item, index) => (
-              <motion.div
-                key={item.step}
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.15 }}
-                viewport={{ once: true }}
-                className="flex items-center gap-8"
-              >
-                <div className="w-20 h-20 rounded-2xl bg-[#789dbe]/10 flex items-center justify-center flex-shrink-0">
-                  <span className="font-serif text-3xl text-[#789dbe]">{item.step}</span>
-                </div>
-                <div className="flex-1 pb-8 border-b border-[#789dbe]/20">
-                  <h3 className="font-serif text-xl text-white mb-2">{item.title}</h3>
-                  <p className="text-white/50">{item.description}</p>
-                </div>
-                <CheckCircle className="w-6 h-6 text-[#789dbe]/30 flex-shrink-0" />
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -188,12 +162,12 @@ export function ClientPortalPageContent() {
             <p className="text-white/60 text-lg mb-10 max-w-xl mx-auto">
               Ready to start planning your unforgettable celebration? Let&apos;s talk about your vision.
             </p>
-            <a
+            <Link
               href="/get-quote"
               className="inline-block px-12 py-5 bg-[#789dbe] text-[#030508] text-sm uppercase tracking-[0.2em] font-medium rounded-full hover:bg-white transition-all duration-500 hover:shadow-[0_0_40px_rgba(120,157,190,0.5)]"
             >
               Get a Quote
-            </a>
+            </Link>
           </motion.div>
         </div>
       </section>
