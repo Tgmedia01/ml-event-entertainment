@@ -33,7 +33,7 @@ const addOns = [
       "Dramatic visual impact on photos and video",
     ],
     images: [
-      { src: "/images/Nicole-Thomas-1675.jpg", caption: "Grand send-off with cold sparks and bubbles" },
+      { src: "/images/wedding-cold-sparks-bubbles-sendoff.jpg", caption: "Grand send-off with cold sparks and bubbles" },
       { src: "/images/wedding-cold-sparks-street.jpg", caption: "Outdoor cold spark moment" },
       { src: "/images/cold-sparks-bride-groom.png", caption: "First dance cold sparks" },
     ],
@@ -63,7 +63,7 @@ const addOns = [
     images: [
       { src: "/images/reception(293).JPG", caption: "Guests having a blast" },
       { src: "/images/photo-booth-mirror.png", caption: "Mirror front in action" },
-      { src: "/images/reception(293).JPG", caption: "Fun props selection" },
+      { src: "/images/reception(378).JPG", caption: "Fun props selection" },
     ],
     cta: "Add Photo Booth",
   },
@@ -109,8 +109,8 @@ const addOns = [
       "Club quality production",
     ],
     images: [
-      { src: "/images/DSC00641-2.jpg", caption: "Packed dance floor" },
-      { src: "/images/Nicole-Thomas-1649.jpg", caption: "Couple on the floor" },
+      { src: "/images/Nicole-Thomas-1649.jpg", caption: "Packed dance floor" },
+      { src: "/images/DSC00641-2.jpg", caption: "Couple on the floor" },
       { src: "/images/s_wphotography_ashleytony_1393.jpg", caption: "Dance floor lighting" },
     ],
     cta: "Included in All Packages",
@@ -125,7 +125,7 @@ export function AddOnsPageContent() {
       <section className="relative min-h-[60vh] lg:min-h-[70vh] flex items-end pb-16 lg:pb-24 pt-32 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/Nicole-Thomas-1675.jpg"
+            src="/images/wedding-cold-sparks-bubbles-sendoff.jpg"
             alt="Wedding add-ons in action"
             className="w-full h-full object-cover object-center"
           />
