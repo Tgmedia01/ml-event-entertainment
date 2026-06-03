@@ -63,7 +63,7 @@ const addOns = [
     images: [
       { src: "/images/reception(293).JPG", caption: "Guests having a blast" },
       { src: "/images/photo-booth-mirror.png", caption: "Mirror front in action" },
-      { src: "/images/reception(378).JPG", caption: "Fun props selection" },
+      { src: "/images/Nicole-Thomas-1675.jpg", caption: "Fun props selection" },
     ],
     cta: "Add Photo Booth",
   },
@@ -125,7 +125,7 @@ export function AddOnsPageContent() {
       <section className="relative min-h-[60vh] lg:min-h-[70vh] flex items-end pb-16 lg:pb-24 pt-32 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/wedding-cold-sparks-bubbles-sendoff.jpg"
+            src="/images/Nicole-Thomas-1675.jpg"
             alt="Wedding add-ons in action"
             className="w-full h-full object-cover object-center"
           />
