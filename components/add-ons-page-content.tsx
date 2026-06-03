@@ -63,7 +63,7 @@ const addOns = [
     images: [
       { src: "/images/reception(293).JPG", caption: "Guests having a blast" },
       { src: "/images/photo-booth-mirror.png", caption: "Mirror front in action" },
-      { src: "/images/Nicole-Thomas-1675.jpg", caption: "Fun props selection" },
+      { src: "/images/reception(378).JPG", caption: "Fun props selection" },
     ],
     cta: "Add Photo Booth",
   },
