@@ -109,7 +109,7 @@ const addOns = [
       "Club quality production",
     ],
     images: [
-      { src: "/images/Nicole-Thomas-1649.jpg", caption: "Packed dance floor" },
+      { src: "/images/Nicole-Thomas-1649.jpg", caption: "Enhanced Tube Lighting" },
       { src: "/images/DSC00641-2.jpg", caption: "Couple on the floor" },
       { src: "/images/s_wphotography_ashleytony_1393.jpg", caption: "Enhanced Tube Lighting" },
     ],
