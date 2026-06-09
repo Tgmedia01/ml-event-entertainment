@@ -53,7 +53,7 @@ const team = [
   {
     name: "Katelin McTigue",
     role: "Director of Operations",
-    image: "/images/Katelin-M-Headshots-replacement.jpg",
+    image: "/images/Katelin-M-Headshots-replacement",
     bio: "Katelin McTigue is the Director of Operations at ML Event Entertainment and the organizational force behind the scenes. As the wife of founder Mikey Lee, she plays a key role in the client experience. Katelin's background in event planning and sales brings a wealth of experience to her role, allowing her to expertly guide clients with professionalism, warmth, and efficiency. Her strong communication skills and attention to detail ensure that every event starts off on the right foot.",
   },
   {
@@ -262,7 +262,7 @@ export function AboutPageContent() {
         {/* Elfsight Instagram Feed */}
         <div className="elfsight-instagram-wrapper">
           <Script src="https://elfsightcdn.com/platform.js" async strategy="afterInteractive" />
-          <div className="elfsight-app-c61bb2f7-ab3c-48d3-bfb2-dac74c0b8b2b" data-elfsight-app-lazy></div>
+          <div className="elfsight-app-c61bb2f7-ab3c-48d3-bfb2-dac74c0b8b2b" data-elfsight-app-lazy="true"></div>
         </div>
 
         <div className="mt-10 text-center">
