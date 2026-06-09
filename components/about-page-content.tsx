@@ -262,7 +262,7 @@ export function AboutPageContent() {
         {/* Elfsight Instagram Feed */}
         <div className="elfsight-instagram-wrapper">
           <Script src="https://elfsightcdn.com/platform.js" async strategy="afterInteractive" />
-          <div className="elfsight-app-placeholder-id" data-elfsight-app-lazy="true"></div>
+          <div className="elfsight-app-c61bb2f7-ab3c-48d3-bfb2-dac74c0b8b2b" data-elfsight-app-lazy="true"></div>
         </div>
 
         <div className="mt-10 text-center">
