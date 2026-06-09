@@ -33,7 +33,7 @@ const addOns = [
       "Dramatic visual impact on photos and video",
     ],
     images: [
-      { src: "/images/wedding-cold-sparks-bubbles-sendoff.jpg", caption: "Grand send-off with cold sparks and bubbles" },
+      { src: "/images/wedding-cold-sparks-bubbles-sendoff.jpg", caption: "Grand send-off with cold sparks" },
       { src: "/images/wedding-cold-sparks-street.jpg", caption: "Outdoor cold spark moment" },
       { src: "/images/cold-sparks-bride-groom.png", caption: "First dance cold sparks" },
     ],
@@ -111,7 +111,7 @@ const addOns = [
     images: [
       { src: "/images/Nicole-Thomas-1649.jpg", caption: "Packed dance floor" },
       { src: "/images/DSC00641-2.jpg", caption: "Couple on the floor" },
-      { src: "/images/s_wphotography_ashleytony_1393.jpg", caption: "Dance floor lighting" },
+      { src: "/images/s_wphotography_ashleytony_1393.jpg", caption: "Enhanced Tube Lighting" },
     ],
     cta: "Included in All Packages",
     included: true,
