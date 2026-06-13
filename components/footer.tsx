@@ -37,7 +37,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-6" data-cursor="pointer">
               <img
-                src="/images/ml-event-entertainment-logo-scaled.webp"
+                src="https://mlevententertainment.com/wp-content/uploads/2025/06/ml-event-entertainment-logo-scaled.webp"
                 alt="ML Event Entertainment"
                 className="h-14 w-auto object-contain"
                 onError={(e) => {
@@ -134,6 +134,26 @@ export function Footer() {
             ))}
           </div>
 
+          <div className="flex items-center gap-6">
+            <Link
+              href="/privacy"
+              className="text-white/40 hover:text-[#789dbe] transition-colors duration-300 text-xs uppercase tracking-[0.2em]"
+              data-cursor="pointer"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              href="/privacy"
+              className="text-white/40 hover:text-[#789dbe] transition-colors duration-300 text-xs uppercase tracking-[0.2em]"
+              data-cursor="pointer"
+            >
+              Terms & Conditions
+            </Link>
+          </div>
+        </div>
+
+        {/* Copyright row */}
+        <div className="pt-8 mt-8 border-t border-[#789dbe]/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-white/30 text-xs uppercase tracking-[0.2em]">
             © {currentYear} ML Event Entertainment. All rights reserved.
           </p>
