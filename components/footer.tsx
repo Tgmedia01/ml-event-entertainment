@@ -134,31 +134,22 @@ export function Footer() {
             ))}
           </div>
 
-          <div className="flex items-center gap-6">
-            <Link
-              href="/privacy"
-              className="text-white/40 hover:text-[#789dbe] transition-colors duration-300 text-xs uppercase tracking-[0.2em]"
-              data-cursor="pointer"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              href="/privacy"
-              className="text-white/40 hover:text-[#789dbe] transition-colors duration-300 text-xs uppercase tracking-[0.2em]"
-              data-cursor="pointer"
-            >
-              Terms & Conditions
-            </Link>
+          <div className="flex flex-wrap items-center justify-center">
+            <p className="text-white/30 text-xs uppercase tracking-[0.2em]">
+              © {currentYear} ML Event Entertainment. All rights reserved.
+            </p>
+            <span className="text-gray-500 mx-2">|</span>
+            <Link href="/privacy" className="hover:underline text-xs text-gray-400">Privacy Policy</Link>
+            <span className="text-gray-500 mx-2">|</span>
+            <Link href="/privacy" className="hover:underline text-xs text-gray-400">Terms & Conditions</Link>
           </div>
-        </div>
-
-        {/* Copyright row */}
-        <div className="pt-8 mt-8 border-t border-[#789dbe]/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white/30 text-xs uppercase tracking-[0.2em]">
-            © {currentYear} ML Event Entertainment. All rights reserved.
-          </p>
 
           <p className="text-white/30 text-xs uppercase tracking-[0.2em]">Charleston, South Carolina</p>
+        </div>
+
+        {/* Designer Credit */}
+        <div className="text-center text-[10px] text-gray-500 mt-4 block">
+          Designed by <a href="https://tgmedia.uk" target="_blank" rel="noopener noreferrer" className="hover:underline text-gray-400 font-medium">tgmedia</a>
         </div>
       </div>
     </footer>
