@@ -118,7 +118,7 @@ export function PhotoBoothPageContent() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.4, duration: 0.6 }}
               viewport={{ once: true }}
-              className="absolute bottom-6 left-6 glass rounded-full px-6 py-3"
+            
             >
              
             </motion.div>
