@@ -120,7 +120,7 @@ export function PhotoBoothPageContent() {
               viewport={{ once: true }}
               className="absolute bottom-6 left-6 glass rounded-full px-6 py-3"
             >
-              <span className="text-xs uppercase tracking-[0.2em] text-[#789dbe]"></span>
+             
             </motion.div>
           </motion.div>
         </div>
