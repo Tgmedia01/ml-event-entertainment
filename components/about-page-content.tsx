@@ -48,7 +48,7 @@ const team = [
     name: "Mikey Lee",
     role: "Founder & Lead DJ",
     image: "/images/8AFF7056-C15D-4F14-828F-4C2FF7EE67A3.jpg",
-    bio: "Mikey Lee is the founder and lead DJ of ML Event Entertainment, bringing over 20 years of full time DJ experience to weddings, private events, and parties around the world. His career has taken him across Europe, the United States, and aboard some of the largest cruise ships sailing today covering London, Ibiza, Miami, and Los Angeles along the way. After meeting his now wife Katelin, Mikey made the move to Charleston, South Carolina, a city that inspired him to launch his own company. What began as a passion project quickly grew into one of the Lowcountry's most awarded entertainment services.",
+    bio: "Mikey Lee is the founder and lead DJ of ML Event Entertainment, a journey that began on the beautiful island of Ibiza. His professional career has taken him across Europe, the United States, and onto cruise ships, where he met his wife, Katelin. He eventually moved to her hometown of Charleston, South Carolina, a city that inspired him to launch his own wedding and events company. What began as a passion project quickly grew into one of the Lowcountry's most awarded entertainment services.",
   },
   {
     name: "Katelin McTigue",
@@ -58,15 +58,17 @@ const team = [
   },
   {
     name: "Davis",
-    role: "DJ",
+    role: "Lead DJ",
+    imageTag: "DJ DAVIS",
     image: "/images/rsw_1200h_1200cg_true.webp",
     bio: "DJ Davis is a highly sought after talent known for his passion, professionalism, and commitment to delivering top tier entertainment. As a trusted member of the ML Event Entertainment team, Davis shares founder Mikey Lee's dedication to excellence bringing the same high quality experience to every event he performs. With an innate ability to read the room and curate unforgettable moments through music, DJ Davis specialises in creating an atmosphere that is both electric and deeply personal.",
   },
   {
     name: "Aaron",
-    role: "DJ AARO",
+    role: "Lead DJ",
+    imageTag: "DJ AARO",
     image: "/images/rsw_1200h_1200cg_true-mikey.png",
-    bio: "With over 15 years of experience behind the decks, DJ AARO has built a reputation for delivering high-energy, unforgettable events with a personal touch. He brings passion, professionalism, and nonstop fun to every celebration. Originally honing his craft in New Jersey before bringing his talents to Charleston, South Carolina, DJ AARO developed a deep appreciation for all music genres and knows how to create a soundtrack that connects with every crowd. Whether it's timeless classics, current hits, or throwback anthems, he knows how to keep the dance floor packed all night long. Known for his infectious personality and ability to truly read the room, DJ AARO works closely with every client to bring their vision to life and ensure every detail feels seamless from start to finish.",
+    bio: "DJ AARO has built a reputation for delivering high-energy, unforgettable events with a personal touch. Known for his infectious personality, he brings passion, professionalism, and nonstop fun to every celebration. Originally honing his craft in New Jersey before bringing his talents to Charleston, South Carolina, DJ AARO sure knows how to keep a dance floor packed from the moment it opens.",
   },
 ]
 
@@ -175,7 +177,7 @@ export function AboutPageContent() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#030508]/80 via-transparent to-transparent" />
                 <div className="absolute bottom-5 left-5">
-                  <span className="glass rounded-full px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-[#789dbe]">{member.role}</span>
+                  <span className="glass rounded-full px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-[#789dbe]">{member.imageTag ?? member.role}</span>
                 </div>
               </div>
               {/* Text */}
