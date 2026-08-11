@@ -34,11 +34,11 @@ const addOns = [
   },
   {
     icon: Music2,
-    title: "Dance Floor Lighting",
+    title: "Enhanced Dance Floor Lighting",
     subtitle: "Club Style Energy",
     href: "/add-ons#dance-floor-lighting",
     description:
-      "Dynamic synchronised lighting that pulses to the rhythm with colorful washes, strobes, and intelligent moving fixtures tailored to your event. Included as standard in all packages.",
+      "Dynamic synchronised lighting that pulses to the rhythm with colorful washes, strobes, and intelligent moving fixtures tailored to your event.",
     image: "/wedding-dj-party-dance-floor-crowd-celebration-pur.jpg",
   },
 ]
