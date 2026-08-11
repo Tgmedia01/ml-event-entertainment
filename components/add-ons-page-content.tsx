@@ -239,22 +239,23 @@ export function AddOnsPageContent() {
                 </motion.ul>
 
                 {/* CTA */}
-                {addon.included ? (
-                  <div className="inline-flex items-center gap-3 px-6 py-3 border border-[#789dbe]/30 rounded-full">
-                    <Check className="w-4 h-4 text-[#789dbe]" />
-                    <span className="text-[#789dbe] text-xs uppercase tracking-[0.2em]">{addon.cta}</span>
-                  </div>
-                ) : (
-                  <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
-                    <Link
-                      href="/get-quote"
-                      className="inline-flex items-center gap-4 px-8 py-4 bg-[#789dbe] text-[#030508] text-xs uppercase tracking-[0.2em] font-medium rounded-full hover:bg-white transition-all duration-500"
-                    >
-                      {addon.cta}
-                      <span className="w-4 h-[0.5px] bg-[#030508]" />
-                    </Link>
-                  </motion.div>
-                )}
+                {addon.cta &&
+                  ("included" in addon && addon.included ? (
+                    <div className="inline-flex items-center gap-3 px-6 py-3 border border-[#789dbe]/30 rounded-full">
+                      <Check className="w-4 h-4 text-[#789dbe]" />
+                      <span className="text-[#789dbe] text-xs uppercase tracking-[0.2em]">{addon.cta}</span>
+                    </div>
+                  ) : (
+                    <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+                      <Link
+                        href="/get-quote"
+                        className="inline-flex items-center gap-4 px-8 py-4 bg-[#789dbe] text-[#030508] text-xs uppercase tracking-[0.2em] font-medium rounded-full hover:bg-white transition-all duration-500"
+                      >
+                        {addon.cta}
+                        <span className="w-4 h-[0.5px] bg-[#030508]" />
+                      </Link>
+                    </motion.div>
+                  ))}
               </motion.div>
             </div>
           </div>
