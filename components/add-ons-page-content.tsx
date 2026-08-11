@@ -99,7 +99,7 @@ const addOns = [
     description:
       "Our dynamic dance floor lighting transforms your reception space into a vibrant party zone, elevating every beat and movement with synchronised effects that pulse to the rhythm of the music.",
     detail:
-      "From colorful washes and strobes to intelligent moving fixtures, we tailor the look to your event's style and energy, keeping your guests dancing all night long. Dance floor lighting is included as standard in all packages.",
+      "From colorful washes and strobes to intelligent moving fixtures, we tailor the look to your event's style and energy, keeping your guests dancing all night long.",
     features: [
       "Synchronised to the music",
       "Colorful washes and strobes",
