@@ -94,7 +94,7 @@ const addOns = [
   {
     id: "dance-floor-lighting",
     number: "04",
-    title: "Dance Floor Lighting",
+    title: "Enhanced Dance Floor Lighting",
     subtitle: "Club Style Energy",
     description:
       "Our dynamic dance floor lighting transforms your reception space into a vibrant party zone, elevating every beat and movement with synchronised effects that pulse to the rhythm of the music.",
@@ -105,7 +105,6 @@ const addOns = [
       "Colorful washes and strobes",
       "Intelligent moving fixtures",
       "Tailored to your event style",
-      "Included in all packages",
       "Club quality production",
     ],
     images: [
