@@ -282,7 +282,7 @@ export function AddOnsPageContent() {
             </h2>
             <p className="text-white/60 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
               Our Ultimate Reception and Ultimate Full Service packages bundle the DJ, Photo Booth, Cold Sparks,
-              and Venue Uplighting together at a multi service discount. It is the best way to get everything
+              and Venue Uplighting and Enhanced Lighting at a multi service discount. It is the best way to get everything
               you need for one incredible price.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
