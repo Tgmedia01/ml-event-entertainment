@@ -112,7 +112,7 @@ const addOns = [
       { src: "/images/DSC00641-2.jpg", caption: "Couple on the floor" },
       { src: "/images/s_wphotography_ashleytony_1393.jpg", caption: "Enhanced Tube Lighting" },
     ],
-    cta: "Add Enhanced Lighting",
+    cta: "Find Out More",
   },
 ]
 
@@ -308,3 +308,4 @@ export function AddOnsPageContent() {
       </section>
     </>
   )
+}
