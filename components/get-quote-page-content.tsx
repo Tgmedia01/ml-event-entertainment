@@ -2,13 +2,11 @@
 
 import { useEffect } from "react"
 import { motion } from "framer-motion"
-import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react"
 
 function CRMQuestionnaireForm() {
   useEffect(() => {
     if (typeof window === "undefined") return
 
-    // Inject jQuery if not already present
     if (!(window as any).jQuery) {
       const jq = document.createElement("script")
       jq.src = "https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"
@@ -16,7 +14,6 @@ function CRMQuestionnaireForm() {
       document.head.appendChild(jq)
     }
 
-    // Inject CRM validation script
     const script = document.createElement("script")
     script.src = "https://mlevententertainmentclientlogin.com/check_req_info_form.js?v=wtd"
     script.type = "text/javascript"
@@ -273,89 +270,29 @@ function CRMQuestionnaireForm() {
   )
 }
 
-export function ContactPageContent() {
+export function GetQuotePageContent() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative min-h-[50vh] flex items-end pb-16 lg:pb-24 pt-40 bg-[#030508]">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#789dbe]/5 rounded-full blur-[150px] pointer-events-none" />
-        <div className="relative z-10 px-6 lg:px-16 w-full">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-16 lg:pb-24 px-6 lg:px-16">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#004563]/30 to-transparent" />
+        <div className="relative z-10 max-w-4xl">
           <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
-            <p className="text-[#789dbe] uppercase tracking-[0.4em] text-xs mb-6">Get In Touch</p>
-            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-white leading-[0.85]">
-              LET&apos;S TALK
+            <p className="text-[#789dbe] uppercase tracking-[0.4em] text-xs md:text-sm mb-6">Start Planning</p>
+            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-white leading-[0.85] mb-6">
+              GET A
               <br />
-              <span className="italic text-[#789dbe] text-glow">ABOUT YOUR EVENT</span>
+              <span className="italic text-[#789dbe] text-glow">QUOTE</span>
             </h1>
+            <p className="text-white/60 text-lg max-w-xl">
+              Tell us about your event and we&apos;ll create a custom package tailored to your vision.
+            </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Contact Info Row */}
-      <section className="py-16 px-6 lg:px-16 bg-[#030508]">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="flex flex-wrap gap-4 mb-4"
-          >
-            <a href="tel:4246539365" className="flex items-center gap-4 group glass rounded-2xl p-5 flex-shrink-0">
-              <div className="w-10 h-10 rounded-full bg-[#789dbe]/20 flex items-center justify-center flex-shrink-0 group-hover:bg-[#789dbe]/30 transition-colors duration-300">
-                <Phone className="w-4 h-4 text-[#789dbe]" />
-              </div>
-              <div className="whitespace-nowrap">
-                <p className="text-white/30 text-xs uppercase tracking-[0.2em] mb-0.5">Phone</p>
-                <p className="text-white text-sm group-hover:text-[#789dbe] transition-colors duration-300">424.653.9365</p>
-              </div>
-            </a>
-
-            <a href="mailto:mikeylee@mlevententertainment.com" className="flex items-center gap-4 group glass rounded-2xl p-5 flex-shrink-0">
-              <div className="w-10 h-10 rounded-full bg-[#789dbe]/20 flex items-center justify-center flex-shrink-0 group-hover:bg-[#789dbe]/30 transition-colors duration-300">
-                <Mail className="w-4 h-4 text-[#789dbe]" />
-              </div>
-              <div className="whitespace-nowrap">
-                <p className="text-white/30 text-xs uppercase tracking-[0.2em] mb-0.5">Email</p>
-                <p className="text-white text-sm group-hover:text-[#789dbe] transition-colors duration-300">mikeylee@mlevententertainment.com</p>
-              </div>
-            </a>
-
-            <div className="flex items-center gap-4 glass rounded-2xl p-5 flex-shrink-0">
-              <div className="w-10 h-10 rounded-full bg-[#789dbe]/20 flex items-center justify-center flex-shrink-0">
-                <MapPin className="w-4 h-4 text-[#789dbe]" />
-              </div>
-              <div className="whitespace-nowrap">
-                <p className="text-white/30 text-xs uppercase tracking-[0.2em] mb-0.5">Location</p>
-                <p className="text-white text-sm">Charleston, South Carolina</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-4 glass rounded-2xl p-5 flex-shrink-0">
-              <div className="w-10 h-10 rounded-full bg-[#789dbe]/20 flex items-center justify-center flex-shrink-0">
-                <Instagram className="w-4 h-4 text-[#789dbe]" />
-              </div>
-              <div className="whitespace-nowrap">
-                <p className="text-white/30 text-xs uppercase tracking-[0.2em] mb-0.5">Follow Us</p>
-                <div className="flex gap-3 mt-1">
-                  {[
-                    { icon: Instagram, href: "https://www.instagram.com/mlevententertainment", label: "Instagram" },
-                    { icon: Facebook, href: "https://www.facebook.com/mlevententertainment", label: "Facebook" },
-                  ].map((s) => (
-                    <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label}
-                      className="text-white/40 hover:text-[#789dbe] transition-colors duration-300">
-                      <s.icon className="w-4 h-4" />
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Full-width CRM Questionnaire Form */}
-      <section className="pb-24 lg:pb-32 px-6 lg:px-16 bg-[#030508]">
+      {/* Form Section */}
+      <section className="pb-24 lg:pb-32 px-6 lg:px-16">
         <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
