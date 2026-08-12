@@ -2,11 +2,13 @@
 
 import { useEffect } from "react"
 import { motion } from "framer-motion"
+import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react"
 
 function CRMQuestionnaireForm() {
   useEffect(() => {
     if (typeof window === "undefined") return
 
+    // Inject jQuery if not already present
     if (!(window as any).jQuery) {
       const jq = document.createElement("script")
       jq.src = "https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"
@@ -14,8 +16,9 @@ function CRMQuestionnaireForm() {
       document.head.appendChild(jq)
     }
 
+    // Inject CRM validation script
     const script = document.createElement("script")
-    script.src = "https://mlevententertainmentclientlogin.com/check_req_info_form.js"
+    script.src = "https://mlevententertainmentclientlogin.com/check_req_info_form.js?v=wtd"
     script.type = "text/javascript"
     document.body.appendChild(script)
 
@@ -116,7 +119,7 @@ function CRMQuestionnaireForm() {
         className="crm-q-form"
         dangerouslySetInnerHTML={{
           __html: `
-<form style="margin:0;" action="https://mlevententertainmentclientlogin.com/request_information.asp" method="post" name="reqinfoform">
+<form style="margin:0;" action="https://mlevententertainmentclientlogin.com/request_information.asp" method="post" name="reqinfoform" onSubmit="return submitIt(this);">
 <div style="padding: 4px 0;">
 
 <div class="form-group">
@@ -125,7 +128,7 @@ function CRMQuestionnaireForm() {
     <span id="date_select" class="metro-table">
       <select class="monthselect form-control" name="month"><option value="43">Month</option><option value="1">January (1)</option><option value="2">February (2)</option><option value="3">March (3)</option><option value="4">April (4)</option><option value="5">May (5)</option><option value="6">June (6)</option><option value="7">July (7)</option><option value="8">August (8)</option><option value="9">September (9)</option><option value="10">October (10)</option><option value="11">November (11)</option><option value="12">December (12)</option></select>
       <select class="dayselect form-control" name="day"><option value="43">Day</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select>
-      <select class="yearselect form-control" name="year"><option value="43">Year</option><option value="2025">2025</option><option value="2026">2026</option><option value="2027">2027</option><option value="2028">2028</option><option value="2029">2029</option><option value="2030">2030</option><option value="2031">2031</option><option value="2032">2032</option><option value="2033">2033</option><option value="2034">2034</option><option value="2035">2035</option><option value="2036">2036</option><option value="2037">2037</option><option value="2038">2038</option><option value="2039">2039</option><option value="2040">2040</option></select>
+      <select class="yearselect form-control" name="year"><option value="43">Year</option><option value="2026" selected>2026</option><option value="2027">2027</option><option value="2028">2028</option><option value="2029">2029</option><option value="2030">2030</option><option value="2031">2031</option><option value="2032">2032</option><option value="2033">2033</option><option value="2034">2034</option><option value="2035">2035</option><option value="2036">2036</option><option value="2037">2037</option><option value="2038">2038</option><option value="2039">2039</option><option value="2040">2040</option><option value="2041">2041</option><option value="2042">2042</option><option value="2043">2043</option><option value="2044">2044</option><option value="2045">2045</option><option value="2046">2046</option><option value="2047">2047</option><option value="2048">2048</option><option value="2049">2049</option><option value="2050">2050</option></select>
     </span>
   </div>
   <div class="cf"></div>
@@ -174,15 +177,12 @@ function CRMQuestionnaireForm() {
   <div class="col-sm-8">
     <select class="form-control responsive-form-select" name="packageid">
       <option value="0">Select a package...</option>
-      <option value="64214">Cold Spark Machines</option>
-      <option value="64203">DJ Services</option>
+      <option value="64223">Corporate Package</option>
+      <option value="64228">Full Service Package</option>
       <option value="64196">Other/Not Listed</option>
-      <option value="64210">Photo Booth Services</option>
-      <option value="64205">Rehearsal Dinner</option>
-      <option value="64219">Wedding - Full Service Package</option>
-      <option value="63927">Wedding - Reception Package</option>
-      <option value="64208">Wedding - Ultimate Full Service Package</option>
-      <option value="64207">Wedding - Ultimate Reception Package</option>
+      <option value="64230">Reception Package</option>
+      <option value="64231">Ultimate Full Service Package</option>
+      <option value="64207">Ultimate Reception Package</option>
     </select>
   </div>
   <div class="cf"></div>
@@ -219,21 +219,27 @@ function CRMQuestionnaireForm() {
 </div>
 
 <div class="form-group">
-  <div class="col-sm-4 padding-tb-7"><div class="padding-lr-5">Venue Name*<input id="q4_required" name="q4_required" type="hidden" value="TRUE" /></div></div>
-  <div class="col-sm-8"><input class="form-control width90hack" maxlength="250" name="question_4" size="30" type="text" /></div>
+  <div class="col-sm-4 padding-tb-7"><div class="padding-lr-5">We are considering Enhanced Dance Floor Lighting*<input id="q4_required" name="q4_required" type="hidden" value="TRUE" /></div></div>
+  <div class="col-sm-8"><select class="form-control width90hack" name="question_4"><option value="">Please select...</option><option>Yes</option><option>No</option><option>Maybe</option><option>What Is Enhanced Dance Floor Lighting?</option></select></div>
   <div class="cf"></div>
 </div>
 
 <div class="form-group">
-  <div class="col-sm-4 padding-tb-7"><div class="padding-lr-5">Venue Location (state/city)*<input id="q5_required" name="q5_required" type="hidden" value="TRUE" /></div></div>
+  <div class="col-sm-4 padding-tb-7"><div class="padding-lr-5">Venue Name*<input id="q5_required" name="q5_required" type="hidden" value="TRUE" /></div></div>
   <div class="col-sm-8"><input class="form-control width90hack" maxlength="250" name="question_5" size="30" type="text" /></div>
   <div class="cf"></div>
 </div>
 
 <div class="form-group">
-  <div class="col-sm-4 padding-tb-7"><div class="padding-lr-5">Are You*<input id="q6_required" name="q6_required" type="hidden" value="TRUE" /></div></div>
+  <div class="col-sm-4 padding-tb-7"><div class="padding-lr-5">Venue Location (state/city)*<input id="q6_required" name="q6_required" type="hidden" value="TRUE" /></div></div>
+  <div class="col-sm-8"><input class="form-control width90hack" maxlength="250" name="question_6" size="30" type="text" /></div>
+  <div class="cf"></div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-4 padding-tb-7"><div class="padding-lr-5">Are You*<input id="q7_required" name="q7_required" type="hidden" value="TRUE" /></div></div>
   <div class="col-sm-8">
-    <select class="form-control width90hack" name="question_6">
+    <select class="form-control width90hack" name="question_7">
       <option value="">Please select...</option>
       <option>The Bride</option><option>The Groom</option><option>The Partner</option>
       <option>Mother Of The Bride</option><option>Mother Of The Groom</option>
@@ -267,29 +273,89 @@ function CRMQuestionnaireForm() {
   )
 }
 
-export function GetQuotePageContent() {
+export function ContactPageContent() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-16 lg:pb-24 px-6 lg:px-16">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#004563]/30 to-transparent" />
-        <div className="relative z-10 max-w-4xl">
+      {/* Hero */}
+      <section className="relative min-h-[50vh] flex items-end pb-16 lg:pb-24 pt-40 bg-[#030508]">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#789dbe]/5 rounded-full blur-[150px] pointer-events-none" />
+        <div className="relative z-10 px-6 lg:px-16 w-full">
           <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
-            <p className="text-[#789dbe] uppercase tracking-[0.4em] text-xs md:text-sm mb-6">Start Planning</p>
-            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-white leading-[0.85] mb-6">
-              GET A
+            <p className="text-[#789dbe] uppercase tracking-[0.4em] text-xs mb-6">Get In Touch</p>
+            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-white leading-[0.85]">
+              LET&apos;S TALK
               <br />
-              <span className="italic text-[#789dbe] text-glow">QUOTE</span>
+              <span className="italic text-[#789dbe] text-glow">ABOUT YOUR EVENT</span>
             </h1>
-            <p className="text-white/60 text-lg max-w-xl">
-              Tell us about your event and we&apos;ll create a custom package tailored to your vision.
-            </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Form Section */}
-      <section className="pb-24 lg:pb-32 px-6 lg:px-16">
+      {/* Contact Info Row */}
+      <section className="py-16 px-6 lg:px-16 bg-[#030508]">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="flex flex-wrap gap-4 mb-4"
+          >
+            <a href="tel:4246539365" className="flex items-center gap-4 group glass rounded-2xl p-5 flex-shrink-0">
+              <div className="w-10 h-10 rounded-full bg-[#789dbe]/20 flex items-center justify-center flex-shrink-0 group-hover:bg-[#789dbe]/30 transition-colors duration-300">
+                <Phone className="w-4 h-4 text-[#789dbe]" />
+              </div>
+              <div className="whitespace-nowrap">
+                <p className="text-white/30 text-xs uppercase tracking-[0.2em] mb-0.5">Phone</p>
+                <p className="text-white text-sm group-hover:text-[#789dbe] transition-colors duration-300">424.653.9365</p>
+              </div>
+            </a>
+
+            <a href="mailto:mikeylee@mlevententertainment.com" className="flex items-center gap-4 group glass rounded-2xl p-5 flex-shrink-0">
+              <div className="w-10 h-10 rounded-full bg-[#789dbe]/20 flex items-center justify-center flex-shrink-0 group-hover:bg-[#789dbe]/30 transition-colors duration-300">
+                <Mail className="w-4 h-4 text-[#789dbe]" />
+              </div>
+              <div className="whitespace-nowrap">
+                <p className="text-white/30 text-xs uppercase tracking-[0.2em] mb-0.5">Email</p>
+                <p className="text-white text-sm group-hover:text-[#789dbe] transition-colors duration-300">mikeylee@mlevententertainment.com</p>
+              </div>
+            </a>
+
+            <div className="flex items-center gap-4 glass rounded-2xl p-5 flex-shrink-0">
+              <div className="w-10 h-10 rounded-full bg-[#789dbe]/20 flex items-center justify-center flex-shrink-0">
+                <MapPin className="w-4 h-4 text-[#789dbe]" />
+              </div>
+              <div className="whitespace-nowrap">
+                <p className="text-white/30 text-xs uppercase tracking-[0.2em] mb-0.5">Location</p>
+                <p className="text-white text-sm">Charleston, South Carolina</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4 glass rounded-2xl p-5 flex-shrink-0">
+              <div className="w-10 h-10 rounded-full bg-[#789dbe]/20 flex items-center justify-center flex-shrink-0">
+                <Instagram className="w-4 h-4 text-[#789dbe]" />
+              </div>
+              <div className="whitespace-nowrap">
+                <p className="text-white/30 text-xs uppercase tracking-[0.2em] mb-0.5">Follow Us</p>
+                <div className="flex gap-3 mt-1">
+                  {[
+                    { icon: Instagram, href: "https://www.instagram.com/mlevententertainment", label: "Instagram" },
+                    { icon: Facebook, href: "https://www.facebook.com/mlevententertainment", label: "Facebook" },
+                  ].map((s) => (
+                    <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label}
+                      className="text-white/40 hover:text-[#789dbe] transition-colors duration-300">
+                      <s.icon className="w-4 h-4" />
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Full-width CRM Questionnaire Form */}
+      <section className="pb-24 lg:pb-32 px-6 lg:px-16 bg-[#030508]">
         <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
