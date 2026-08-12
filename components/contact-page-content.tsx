@@ -18,7 +18,7 @@ function CRMQuestionnaireForm() {
 
     // Inject CRM validation script
     const script = document.createElement("script")
-    script.src = "https://mlevententertainmentclientlogin.com/check_req_info_form.js?v=e50"
+    script.src = "https://mlevententertainmentclientlogin.com/check_req_info_form.js?v=wtd"
     script.type = "text/javascript"
     document.body.appendChild(script)
 
@@ -177,24 +177,12 @@ function CRMQuestionnaireForm() {
   <div class="col-sm-8">
     <select class="form-control responsive-form-select" name="packageid">
       <option value="0">Select a package...</option>
-      <option value="64231">2027/2028 Ultimate Full Service Package</option>
-      <option value="64207">2027/2028 Ultimate Reception Package</option>
-      <option value="64214">Cold Spark Machines</option>
       <option value="64223">Corporate Package</option>
-      <option value="64210">Corporate Photo Booth Services</option>
-      <option value="64222">DJ Party Service</option>
-      <option value="64203">DJ Services</option>
-      <option value="64224">Dj Services</option>
-      <option value="64219">Lead DJ Full Service Package</option>
-      <option value="64232">Lead DJ Reception Package</option>
-      <option value="64227">Mic and Speaker Set Up</option>
-      <option value="64226">New Photobooth 4 hrs ($995)</option>
-      <option value="64225">New-Photobooth 3 hrs ($795)</option>
-      <option value="64221">NYE party package</option>
+      <option value="64228">Full Service Package</option>
       <option value="64196">Other/Not Listed</option>
-      <option value="64205">Rehearsal Dinner</option>
-      <option value="63927">Wedding - Reception Package</option>
-      <option value="64208">Wedding - Ultimate Full Service Package</option>
+      <option value="64230">Reception Package</option>
+      <option value="64231">Ultimate Full Service Package</option>
+      <option value="64207">Ultimate Reception Package</option>
     </select>
   </div>
   <div class="cf"></div>
